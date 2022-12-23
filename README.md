@@ -1,15 +1,7 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 CDP DOCUMENTS GENERATOR FOR CO!
 
-This project has been created using **webpack-cli**, you can now run
+you can now run this project with:
 
 ```
 npm run build
 ```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
