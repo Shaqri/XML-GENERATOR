@@ -43,6 +43,7 @@ const generateZipWithDocuments = (doc) => {
       let folioAlpha = folioNode.textContent.replace(/(\d+)/i, '');
       folioNode.textContent = `${folioAlpha}${parseInt(folioNumber) + 1}`;
       zip.file(`${folioNode.textContent}.xml`, doc.documentElement.outerHTML);
+      zip.file(`${folioNode.textContent}.pdf`, '');
     }
 
     zip.generateAsync({ type: 'blob' }).then(function (content) {
