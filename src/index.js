@@ -39,7 +39,9 @@ const generateZipWithDocuments = (doc) => {
       let uuidNode = doc.getElementsByTagName('cbc:UUID')[0];
       uuidNode.textContent = crypto.randomUUID();
       let folioNode = doc.getElementsByTagName('cbc:ID')[0];
-      folioNode.textContent = parseInt(folioNode.textContent) + 1;
+      let folioNumber = folioNode.textContent.match(/(\d+)/);
+      let folioAlpha = folioNode.textContent.replace(/(\d+)/i, '');
+      folioNode.textContent = `${folioAlpha}${parseInt(folioNumber) + 1}`;
       zip.file(`${folioNode.textContent}.xml`, doc.documentElement.outerHTML);
     }
 
