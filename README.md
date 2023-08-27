@@ -1,4 +1,4 @@
-# 🚀 CDP DOCUMENTS GENERATOR FOR CO!
+# 🚀 XML GENERATOR!
 
 you can now run this project with:
 
